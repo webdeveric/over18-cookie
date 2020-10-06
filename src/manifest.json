@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Over 18 Cookie",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Set the over18 cookie automatically so you can skip Reddit's age gate.",
   "developer": {
     "name": "Eric King",
