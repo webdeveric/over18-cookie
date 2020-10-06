@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "Over 18 Cookie",
+  "version": "0.0.0",
+  "description": "Set the over18 cookie automatically so you can skip Reddit's age gate.",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "over18-cookie@webdeveric.com"
+    }
+  },
+  "incognito": "spanning",
+  "permissions": [
+    "*://*.reddit.com/*",
+    "cookies",
+    "privacy"
+  ],
+  "background": {
+    "page": "background.html"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "name": "@webdeveric/over18-cookie",
+  "version": "0.0.0",
+  "description": "Set the over18 cookie automatically so you can skip Reddit's age gate.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint ./*.js ./src --ext .js --fix",
+    "dev": "NODE_ENV=development webpack --watch",
+    "prebuild": "npm run lint",
+    "build": "web-ext build",
+    "postbuild": "web-ext lint",
+    "start": "web-ext run",
+    "start:both": "web-ext run -t firefox-desktop -t chromium",
+    "presign": "npm run build",
+    "sign": "web-ext sign",
+    "version": "sync-package-version ./src/manifest.json | xargs git add"
+  },
+  "keywords": [
+    "over18",
+    "cookie",
+    "reddit.com",
+    "age",
+    "gate",
+    "web-extension",
+    "firefox-extension"
+  ],
+  "author": "Eric King <eric@webdeveric.com> (https://webdeveric.com/)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/webdeveric/over18-cookie.git"
+  },
+  "bugs": {
+    "url": "https://github.com/webdeveric/over18-cookie/issues"
+  },
+  "homepage": "https://github.com/webdeveric/over18-cookie",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^7.10.0",
+    "eslint-config-webdeveric": "^0.7.0",
+    "web-ext": "^5.2.0"
+  }
+}
