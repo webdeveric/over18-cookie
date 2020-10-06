@@ -6,7 +6,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint ./*.js ./src --ext .js --fix",
     "dev": "NODE_ENV=development webpack --watch",
-    "prebuild": "npm run lint",
+    "spellcheck": "cspell \"./{.github,src}/**/*.{js,json}\" \"./*.{md,js}\" \"./package.json\"",
+    "prebuild": "npm run spellcheck && npm run lint",
     "build": "web-ext build",
     "postbuild": "web-ext lint",
     "start": "web-ext run",
@@ -35,6 +36,7 @@
   "homepage": "https://github.com/webdeveric/over18-cookie",
   "license": "MIT",
   "devDependencies": {
+    "cspell": "^4.1.0",
     "eslint": "^7.10.0",
     "eslint-config-webdeveric": "^0.7.0",
     "web-ext": "^5.2.0"
