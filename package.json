@@ -1,6 +1,6 @@
 {
   "name": "@webdeveric/over18-cookie",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Set the over18 cookie automatically so you can skip Reddit's age gate.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
