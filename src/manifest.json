@@ -3,6 +3,10 @@
   "name": "Over 18 Cookie",
   "version": "0.0.0",
   "description": "Set the over18 cookie automatically so you can skip Reddit's age gate.",
+  "developer": {
+    "name": "Eric King",
+    "url": "https://webdeveric.com/"
+  },
   "browser_specific_settings": {
     "gecko": {
       "id": "over18-cookie@webdeveric.com"
