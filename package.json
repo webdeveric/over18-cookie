@@ -38,7 +38,7 @@
   "devDependencies": {
     "@webdeveric/eslint-config": "^0.1.0",
     "@webdeveric/sync-package-version": "^0.3.0",
-    "cspell": "^4.2.2",
+    "cspell": "^5.1.2",
     "eslint": "^7.13.0",
     "web-ext": "^5.4.0"
   }
