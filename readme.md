@@ -2,6 +2,10 @@
 
 Set the over18 cookie automatically so you can skip Reddit's age gate.
 
+## Install
+
+https://addons.mozilla.org/en-US/firefox/addon/over-18-cookie/
+
 ## Local development
 
 This runs `web-ext` and loads the extension in Firefox.
