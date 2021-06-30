@@ -40,6 +40,6 @@
     "@webdeveric/sync-package-version": "^0.3.0",
     "cspell": "^5.3.12",
     "eslint": "^7.25.0",
-    "web-ext": "^6.1.0"
+    "web-ext": "^6.2.0"
   }
 }
