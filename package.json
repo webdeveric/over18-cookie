@@ -36,10 +36,10 @@
   "homepage": "https://github.com/webdeveric/over18-cookie",
   "license": "MIT",
   "devDependencies": {
-    "@webdeveric/eslint-config": "^0.2.3",
-    "@webdeveric/sync-package-version": "^0.3.0",
-    "cspell": "^6.1.1",
-    "eslint": "^8.14.0",
-    "web-ext": "^6.8.0"
+    "@webdeveric/eslint-config": "^0.2.4",
+    "@webdeveric/sync-package-version": "^0.4.2",
+    "cspell": "^6.16.0",
+    "eslint": "^8.29.0",
+    "web-ext": "^7.4.0"
   }
 }
