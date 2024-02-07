@@ -15,5 +15,5 @@ module.exports = {
       'about:config',
     ],
   },
-  ignoreFiles: [ 'package-lock.json' ],
+  ignoreFiles: [ 'pnpm-lock.yaml' ],
 };

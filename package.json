@@ -2,8 +2,8 @@
   "name": "@webdeveric/over18-cookie",
   "version": "0.2.0",
   "description": "Set the over18 cookie automatically so you can skip Reddit's age gate.",
+  "packageManager": "pnpm@8.15.1+sha256.245fe901f8e7fa8782d7f17d32b6a83995e2ae03984cb5b62b8949bfdc27c7b5",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint ./*.js ./src --ext .js --fix",
     "dev": "NODE_ENV=development webpack --watch",
     "spellcheck": "cspell \"./{.github,src}/**/*.{js,json}\" \"./*.{md,js}\" \"./package.json\"",
@@ -36,10 +36,10 @@
   "homepage": "https://github.com/webdeveric/over18-cookie",
   "license": "MIT",
   "devDependencies": {
-    "@webdeveric/eslint-config": "^0.3.0",
-    "@webdeveric/sync-package-version": "^0.4.2",
-    "cspell": "^6.16.0",
-    "eslint": "^8.29.0",
-    "web-ext": "^7.4.0"
+    "@webdeveric/eslint-config": "^0.4.0",
+    "@webdeveric/sync-package-version": "^0.4.3",
+    "cspell": "^8.3.2",
+    "eslint": "^8.56.0",
+    "web-ext": "^7.11.0"
   }
 }
