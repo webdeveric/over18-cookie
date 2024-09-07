@@ -13,11 +13,7 @@
     }
   },
   "incognito": "spanning",
-  "permissions": [
-    "*://*.reddit.com/*",
-    "cookies",
-    "privacy"
-  ],
+  "permissions": ["*://*.reddit.com/*", "cookies", "privacy"],
   "background": {
     "page": "background.html"
   }

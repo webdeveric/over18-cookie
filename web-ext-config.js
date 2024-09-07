@@ -10,10 +10,7 @@ module.exports = {
     overwriteDest: true,
   },
   run: {
-    startUrl: [
-      'about:devtools-toolbox?type=extension&id=over18-cookie%40webdeveric.com',
-      'about:config',
-    ],
+    startUrl: ['about:devtools-toolbox?type=extension&id=over18-cookie%40webdeveric.com', 'about:config'],
   },
-  ignoreFiles: [ 'pnpm-lock.yaml' ],
+  ignoreFiles: ['pnpm-lock.yaml'],
 };

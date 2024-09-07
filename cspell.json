@@ -1,16 +1,6 @@
 {
-  "version": "0.1",
+  "version": "0.2",
   "language": "en",
-  "words": [
-    "devtools",
-    "firstparty",
-    "postbuild",
-    "prebuild",
-    "presign",
-    "reddit",
-    "Reddit's",
-    "webdeveric",
-    "xargs"
-  ],
+  "words": ["devtools", "firstparty", "postbuild", "prebuild", "presign", "reddit", "Reddit's", "webdeveric", "xargs"],
   "flagWords": []
 }

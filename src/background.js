@@ -4,8 +4,7 @@
  * @param {string} url
  * @see https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies/set
  */
-async function setOver18Cookie({ url, domain, firstPartyDomain, storeId })
-{
+async function setOver18Cookie({ url, domain, firstPartyDomain, storeId }) {
   try {
     const firstPartyIsolate = await browser.privacy.websites.firstPartyIsolate.get({});
 
@@ -23,14 +22,13 @@ async function setOver18Cookie({ url, domain, firstPartyDomain, storeId })
 
     return cookie;
   } catch (error) {
-    console.error( error );
+    console.error(error);
 
     throw error;
   }
 }
 
-async function setCookies()
-{
+async function setCookies() {
   const stores = await browser.cookies.getAllCookieStores();
 
   const promises = [];
@@ -40,13 +38,10 @@ async function setCookies()
     firstPartyDomain: 'reddit.com',
   };
 
-  const urls = [
-    'https://www.reddit.com/',
-    'https://old.reddit.com/',
-  ];
+  const urls = ['https://www.reddit.com/', 'https://old.reddit.com/'];
 
-  stores.forEach( store => {
-    urls.forEach( url => {
+  stores.forEach((store) => {
+    urls.forEach((url) => {
       promises.push(
         setOver18Cookie({
           ...domainDetails,
@@ -57,20 +52,18 @@ async function setCookies()
     });
   });
 
-  const results = await Promise.allSettled( promises );
+  const results = await Promise.allSettled(promises);
 
   return results;
 }
 
-function onFirstPartyIsolateChange({ value })
-{
+function onFirstPartyIsolateChange({ value }) {
   console.log(`privacy.firstparty.isolate has been changed to ${value}`);
 
   setCookies();
 }
 
-function onWindowCreated(/* window */)
-{
+function onWindowCreated(/* window */) {
   setCookies();
 }
 
@@ -79,13 +72,13 @@ function onWindowCreated(/* window */)
  *
  * @see https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/onChange
  */
-browser.privacy.websites.firstPartyIsolate.onChange.addListener( onFirstPartyIsolateChange );
+browser.privacy.websites.firstPartyIsolate.onChange.addListener(onFirstPartyIsolateChange);
 
 /**
  * This will not fire for incognito windows unless "Run in Private Windows" is set to "Allow"
  *
  * @see https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/windows/onCreated
  */
-browser.windows.onCreated.addListener( onWindowCreated );
+browser.windows.onCreated.addListener(onWindowCreated);
 
 setCookies();
