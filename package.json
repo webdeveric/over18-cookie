@@ -2,20 +2,8 @@
   "name": "@webdeveric/over18-cookie",
   "version": "0.2.0",
   "description": "Set the over18 cookie automatically so you can skip Reddit's age gate.",
-  "packageManager": "pnpm@8.15.1+sha256.245fe901f8e7fa8782d7f17d32b6a83995e2ae03984cb5b62b8949bfdc27c7b5",
-  "scripts": {
-    "lint": "eslint ./*.js ./src --ext .js --fix",
-    "dev": "NODE_ENV=development webpack --watch",
-    "spellcheck": "cspell \"./{.github,src}/**/*.{js,json}\" \"./*.{md,js}\" \"./package.json\"",
-    "prebuild": "npm run spellcheck && npm run lint",
-    "build": "web-ext build",
-    "postbuild": "web-ext lint",
-    "start": "web-ext run",
-    "start:both": "web-ext run -t firefox-desktop -t chromium",
-    "presign": "npm run build",
-    "sign": "web-ext sign",
-    "version": "sync-package-version ./src/manifest.json | xargs git add"
-  },
+  "license": "MIT",
+  "packageManager": "pnpm@9.9.0+sha512.60c18acd138bff695d339be6ad13f7e936eea6745660d4cc4a776d5247c540d0edee1a563695c183a66eb917ef88f2b4feb1fc25f32a7adcadc7aaf3438e99c1",
   "keywords": [
     "over18",
     "cookie",
@@ -34,12 +22,28 @@
     "url": "https://github.com/webdeveric/over18-cookie/issues"
   },
   "homepage": "https://github.com/webdeveric/over18-cookie",
-  "license": "MIT",
+  "scripts": {
+    "format": "prettier . --write",
+    "lint": "eslint ./*.js ./src --ext .js --fix",
+    "dev": "NODE_ENV=development webpack --watch",
+    "spellcheck": "cspell \"./{.github,src}/**/*.{js,json}\" \"./*.{md,js}\" \"./package.json\"",
+    "prebuild": "npm run spellcheck && npm run lint",
+    "build": "web-ext build",
+    "postbuild": "web-ext lint",
+    "start": "web-ext run",
+    "start:both": "web-ext run -t firefox-desktop -t chromium",
+    "presign": "npm run build",
+    "sign": "web-ext sign",
+    "version": "sync-package-version ./src/manifest.json | xargs git add"
+  },
+  "prettier": "@webdeveric/prettier-config",
   "devDependencies": {
-    "@webdeveric/eslint-config": "^0.4.0",
-    "@webdeveric/sync-package-version": "^0.4.3",
-    "cspell": "^8.3.2",
-    "eslint": "^8.56.0",
-    "web-ext": "^7.11.0"
+    "@webdeveric/eslint-config": "^0.7.0",
+    "@webdeveric/prettier-config": "^0.3.0",
+    "@webdeveric/sync-package-version": "^0.5.0",
+    "cspell": "^8.14.2",
+    "eslint": "^8.57.0",
+    "prettier": "^3.3.3",
+    "web-ext": "^8.2.0"
   }
 }
